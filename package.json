@@ -1,0 +1,52 @@
+{
+  "name": "iso_8583_exos",
+  "version": "1.5.0",
+  "description": "A javascript library for messaging in iso 8583 messaging format by Roy Salgado.",
+  "main": "lib/8583.js",
+  "scripts": {
+    "lint": "eslint lib test --fix",
+    "pretest": "eslint lib test --fix",
+    "docs": "jsdoc -c js_docs.conf.json .",
+    "test": "nyc --reporter=html --reporter=lcov ava --verbose",
+    "test.watch": " npx ava --verbose --watch"
+  },
+  "ava": {
+    "babel": true,
+    "files": [
+      "test/*.js"
+    ],
+    "source": [
+      "lib/**/*.{js}"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "powerAssert": false
+  },
+  "keywords": [
+    "iso",
+    "iso8583",
+    "iso_8583",
+    "card transaction",
+    "8583"
+  ],
+  "author": "Roy Salgado Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "codepage": "^1.15.0",
+    "date-fns": "^2.9.0",
+    "jxon": "^2.0.0-beta.5"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "ava": "^3.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.20.0",
+    "gulp": "^4.0.2",
+    "gulp-shell": "^0.8.0",
+    "jsdoc": "^3.6.3",
+    "nyc": "^15.0.1",
+    "toast-jsdoc": "^1.0.2"
+  }
+}
